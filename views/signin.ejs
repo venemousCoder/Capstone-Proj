@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>Signup FAMSpices</title>
+  </head>
+  <body>
+    <section class="sign" id="signin">
+      <form class="form" action="spicies" method="post">
+        <fieldset class="fieldset">
+          <h1>Signin 🔰</h1>
+          <% if (error!= null) {%>
+          <div class="errr"><%= "Username already taken!"%></div>
+          <%}%>
+          <input
+            type="email"
+            class="inputs"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            class="inputs"
+            name="username"
+            id="username"
+            placeholder="Username"
+          />
+          <!-- <input
+            style="column-gap: 20vh"
+            class="inputs"
+            type="password"
+            name="pwd"
+            id="pwd"
+            placeholder="Enter Password"
+          /> -->
+          <!-- <input
+            style="column-gap: 20vh"
+            class="inputs"
+            type="password"
+            name="repwd"
+            id="repwd"
+            placeholder="Confirm Password"
+          /> -->
+          <label for="subscribe" class="inputs" id="subscribe">Subscribe: <input
+            style="column-gap: 20vh"
+            type="radio"
+            name="subscribe"
+          /></label>
+          <input type="submit" class="inputs" id="submit" value="Signin" />
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

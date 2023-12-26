@@ -1,0 +1,106 @@
+body {
+  all: unset;
+  color: aliceblue;
+  background: fixed lightskyblue linear-gradient(0deg, #ff0000, #d1ce00);
+}
+
+/* views/partials/nav.ejs */
+
+.nav {
+  /* margin: 0.2% 0 0 0; */
+  font-weight: bolder;
+  display: grid;
+  color: rgb(233, 47, 47);
+  background: fixed black;
+  /* height: 10vh; */
+  grid-template-columns: auto auto auto auto auto;
+}
+
+/* nav links */
+
+.links {
+  background-color: rgb(61, 61, 78);
+  text-align: center;
+  padding: 5vh;
+  /* border: solid .5px black; */
+  /* color: rgb(255, 255, 255); */
+}
+
+/* welcome header */
+
+#welcome {
+  text-align: center;
+}
+
+/* views/partials/sidebar.ejs */
+
+aside {
+  margin-left: 85%;
+  text-overflow: inherit;
+  position: absolute;
+}
+
+/* home route styles */
+
+.head1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: azure;
+}
+.signOrLog {
+  text-shadow: 2px 1px black;
+  color: rgb(255, 255, 255);
+}
+#hot {
+  color: rgb(255, 0, 0);
+}
+#new {
+  color: rgb(68, 0, 255);
+}
+#water {
+  color: rgb(0, 28, 184);
+}
+.contactus {
+  position: absolute;
+  margin: 33% 0 0% 0;
+}
+.form {
+  display: block;
+}
+
+/* signin route styles */
+
+.form .fieldset{
+  display: grid;
+  justify-items: center;
+  margin: 15% 0 0 0;
+  border: beige 0vh;
+}
+
+.inputs {
+  display: block;
+  margin: 0 0 2% 0;
+  width: 30%;
+}
+
+#submit {
+  max-width: 15%;
+  border-radius: 5vh;
+  padding: 1vh;
+}
+
+#subscribe {
+  display: inline;
+}
+
+/* views/partials/footer.ejs */
+
+footer {
+  background: fixed rgb(44, 42, 42);
+  width: auto;
+  position: static;
+  text-align: center;
+  margin: 44% 0 0% 0;
+}

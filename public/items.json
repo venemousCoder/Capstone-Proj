@@ -1,0 +1,11 @@
+{
+  "item1": {
+    "SpiceName": "Blazing Garlic Powder",
+    "Ingredients": ["Chili pepper", "'Garlic'", "Seasoning", "Salt"]
+  },
+  "item2": {
+    "SpiceName": "Regular Red-Hot Chili (powder)",
+    "Ingredients": ["Chili Pepper", "'Seasoning", "Salt"]
+  },
+  "HotSpices": ["Blazing Garlic Powder","Regular Red-Hot Chili (powder)"]
+}

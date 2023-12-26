@@ -1,0 +1,16 @@
+<aside>
+  <section class="top">
+    <h1 class="head1">Top spices</h1>
+    <ul class="newSpice">
+      <li><%= items.item1.SpiceName %></li>
+    </ul>
+  </section>
+  <section class="new">
+    <h1 class="head1">New spices</h1>
+    <ul class="topSpice">
+      <% for( let i = 0; i < items.HotSpices.length; i++ ) { %>
+      <li><%= items.HotSpices[i] %></li>
+      <% } %>
+    </ul>
+  </section>
+</aside>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>spices</title>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <section class="spicies">
+      <% for( let i = 0; i < spicer.length; i++ ) { %>
+      <div class="spiciesCard" id="spice1">
+        <form action="/" method="post">
+          <div class="spiceInfo">
+            <h1 class="spiceHead"><%= spicer[i].spiceName %></h1>
+            <ul class="spiceIngredients">
+              <% spicer[i].ingredients.forEach(element => {%>
+
+              <li><%= element %></li>
+
+              <% }); %>
+            </ul>
+            <div class="price">$<%= spicer[i].price %></div>
+            <input type="submit" value="BUY" class="submit" />
+          </div>
+        </form>
+      </div>
+      <% } %>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

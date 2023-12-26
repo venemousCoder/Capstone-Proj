@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/styles/styles.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h1 id="Welcome">Welcome to FAMSpices</h1>
+    <%- include('./partials/sidebar.ejs') %>
+    <main class="content">
+      <h3>
+        We have some of the <span id="new">NEWEST</span>,<span id="hot">
+          HOTTEST</span
+        >
+        and <span id="water">MOUTHWATERING</span> spices.
+        <a class="signOrLog" href="signin">Signup</a> or
+        <a class="signOrLog" href="login">login</a> to view our secreat recipies
+        for our spices!!!
+      </h3>
+    </main>
+    <section class="contactus" id="contact">
+      <form action="#" method="post">
+        <fieldset>
+          <input
+            type="email"
+            class="form"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <input
+            style="column-gap: 20vh"
+            class="form"
+            type="text"
+            name="feedback"
+            id="feedback"
+            placeholder="Tell us about your experience!"
+          />
+          <input type="submit" class="form" value="Send" />
+        </fieldset>
+      </form>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
