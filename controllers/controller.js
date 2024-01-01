@@ -11,22 +11,18 @@ let item = JSON.parse(items);
 //middlewares
 
 function showSubs(req, res) {
-    mod.user.find({ subscribed: "on" })
+    mod.user.find()
         .then((subs) => {
-            req.data = subs;
-            res.send(req.data)
-            // console.log(subs[17].spiceCourse);
-            spices.spicy.find({ spiceName: "Blazing Garlic Powder" })
-                .then((spicer) => {
-                    subs[17].spiceCourse.push(spicer[0]._id);
-                    subs[17].save()
-                    spicer[0].save()
-                    subs[17].populate('spiceCourse').then((test)=>{
-
-                        console.log('\n test: \n',test);
+            subs.forEach((elm) => {
+                // console.log(elm);
+                elm.populate('spiceCourse')
+                    .then((item) => {
+                        return item.spiceCourse
                     })
-                })
-                .catch(err => console.log(err))
+            })
+            setTimeout(() => {
+                res.render('contact.ejs', { users: subs })
+            }, 300)
         })
         .catch(err => console.log(err))
 }

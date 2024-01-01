@@ -95,6 +95,19 @@ a {
   display: inline;
 }
 
+/* contact route */
+
+.table{
+  display: grid;
+  grid-template-columns:   auto;
+  padding: 10vh;
+}
+
+.trow1 thead{
+  padding: 2vh;
+  margin: 0 0 0 20%;
+}
+
 /* views/partials/footer.ejs */
 
 footer {

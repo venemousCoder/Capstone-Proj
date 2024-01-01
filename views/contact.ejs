@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h2>Users Table</h2>
+    <table class="table">
+      <thead>
+        <tr class="trow">
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Subscribed</th>
+          <th>Courses Registered</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <% i=0 %>
+        <% users.forEach(user => { %>
+        <tr class="trow1">
+          <td><%= user.userName %></td>
+          <td><%= user.email %></td>
+          <td> <pre><%= user.subscribed %></pre></td>
+          <% if(user.spiceCourse[0]== undefined) { %>
+            <td><%= 'no course' %></td>
+            <% }else{ %>
+                <%user.spiceCourse.forEach((spice)=>{ %><td> <%= spice.spiceName %> </td><% }) %>
+            <% } %>
+           <% i+=1}); %>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
