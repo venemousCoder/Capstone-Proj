@@ -2,6 +2,7 @@ body {
   all: unset;
   color: aliceblue;
   background: fixed lightskyblue linear-gradient(0deg, #ff0000, #d1ce00);
+  background-size: 100%;
 }
 
 /* views/partials/nav.ejs */
@@ -103,9 +104,19 @@ a {
   padding: 10vh;
 }
 
-.trow1 thead{
-  padding: 2vh;
-  margin: 0 0 0 20%;
+tr{
+  text-align: center;
+}
+td{
+  max-width: inherit;
+  overflow: hidden;
+}
+
+.trow {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 2vh; */
+  /* margin: 0 0 0 20%; */
 }
 
 /* views/partials/footer.ejs */

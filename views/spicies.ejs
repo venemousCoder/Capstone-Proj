@@ -9,24 +9,24 @@
   <body>
     <%- include('./partials/nav.ejs') %>
     <section class="spicies">
-      <% for( let i = 0; i < spicer.length; i++ ) { %>
+      <% spicer.forEach( (spice)=> { %>
       <div class="spiciesCard" id="spice1">
         <form action="/" method="post">
           <div class="spiceInfo">
-            <h1 class="spiceHead"><%= spicer[i].spiceName %></h1>
+            <h1 class="spiceHead"><%= spice.spiceName %></h1>
             <ul class="spiceIngredients">
-              <% spicer[i].ingredients.forEach(element => {%>
+              <% spice.ingredients.forEach(element => {%>
 
               <li><%= element %></li>
 
               <% }); %>
             </ul>
-            <div class="price">$<%= spicer[i].price %></div>
+            <div class="price">$<%= spice.price %></div>
             <input type="submit" value="BUY" class="submit" />
           </div>
         </form>
       </div>
-      <% } %>
+      <% }); %>
     </section>
     <%- include('./partials/footer.ejs') %>
   </body>

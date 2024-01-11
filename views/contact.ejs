@@ -19,20 +19,26 @@
         </tr>
       </thead>
       <tbody class="tbody">
-        <% i=0 %>
-        <% users.forEach(user => { %>
-        <tr class="trow1">
-          <td><%= user.userName %></td>
+          <% i=0 %>
+          <% users.forEach(user => { %>
+            <tr class="trow">
+          <td><a href=<%= `/user/${user._id}` %>><%= user.userName %></a></td>
           <td><%= user.email %></td>
           <td> <pre><%= user.subscribed %></pre></td>
           <% if(user.spiceCourse[0]== undefined) { %>
             <td><%= 'no course' %></td>
             <% }else{ %>
-                <%user.spiceCourse.forEach((spice)=>{ %><td> <%= spice.spiceName %> </td><% }) %>
-            <% } %>
-           <% i+=1}); %>
-        </tr>
-      </tbody>
+              <%user.spiceCourse.forEach((spice)=>{ %><td> <%= spice.spiceName %> </td><% }) %>
+              <% } %>
+            </tr>
+            <tr><td><a href=<%= `/update/${user._id}`%>> Edit </a></td></tr>
+            <tr>
+              <td>
+                <a onclick="return confirm(`Are you sure you want to delete this user`)" href=<%= `/subs/delete/${user._id}?_method=delete`%>> Delete </a>
+              </td>
+            </tr>
+            <% i+=1}); %>
+        </tbody>
     </table>
   </body>
 </html>
